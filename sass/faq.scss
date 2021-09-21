@@ -1,0 +1,106 @@
+@import "variables";
+.faq-container {
+  .letter {
+    font-family: "Actor", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 2px;
+    padding-right: 30px;
+    color: #e5e5e5;
+  }
+  .accordion {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    align-items: center;
+
+    .arrow {
+      padding-left: 25px;
+    }
+  }
+  .faq-text {
+    padding-right: 55px;
+    width: 178px;
+    font-family: "Aclonica", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-color;
+  }
+  .panel {
+    display: none;
+    background-color: $white-color;
+    overflow: hidden;
+    .panel-accordion {
+      display: flex;
+      cursor: pointer;
+      padding: 10px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      align-items: center;
+    }
+  }
+  .panel-text {
+    width: 270px;
+    font-family: "Aclonica", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black-color;
+  }
+  .bottom-link {
+    display: flex;
+    justify-content: center;
+    .for-link {
+      margin-top: 25px;
+      font-family: "Acme", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: $green-color;
+    }
+  }
+}
+@media screen and (min-width: 530px) {
+  .faq-container {
+    .letter {
+      font-size: 70px;
+    }
+    .accordion {
+      padding: 30px;
+    }
+    .panel {
+      padding: 30px;
+    }
+    .panel-text {
+      font-size: 24px;
+      width: 100%;
+      padding-left: 100px;
+    }
+    .faq-text {
+      font-size: 24px;
+      width: 100%;
+      padding-left: 100px;
+    }
+  }
+}
+.accordion.active {
+  .arrow {
+    transform: scale(-1, -1);
+  }
+}
